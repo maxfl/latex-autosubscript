@@ -89,7 +89,7 @@
 %}
 
 \NewDocumentCommand\MakeIndexedVariable{ m m O{} O{} }{%
-  \NewDocumentCommand#1{ O{} O{} }{%
+  \DeclareDocumentCommand#1{ O{} O{} }{%
     \Subscripts{#2}[#3][##1][#4][##2]%
     \xspace%
   }%
@@ -99,7 +99,7 @@
   % #2 -> cmdname
   % #3 -> body
   % #4 -> floating index
-  \NewDocumentCommand#2{ O{} O{} }{%
+  \DeclareDocumentCommand#2{ O{} O{} }{%
     \IfBooleanTF{#1}{%
       \SubscriptsF*{#3}{#4}[##1][##2]%
     }{%
